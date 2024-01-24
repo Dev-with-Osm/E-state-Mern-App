@@ -71,10 +71,11 @@ export default function Profile() {
       const data = await res.json();
       if (data.success === false) {
         dispatch(updateUserFailure(data.message));
+        return;
       }
       dispatch(updateUserSuccess(data));
       setUpdateSuccess(true);
-    } catch (err) {
+    } catch (error) {
       dispatch(updateUserFailure(error.message));
     }
   };
@@ -145,8 +146,8 @@ export default function Profile() {
         <span className="text-red-800 cursor-pointer">Sign Out</span>
       </div>
 
-      <p className="text-red-800 mt-5">{error ? error : ""}</p>
-      <p className="text-green-800 mt-5">
+      <p className="text-red-800 font-semibold mt-5">{error ? error : ""}</p>
+      <p className="text-green-800 mt-5 font-semibold">
         {updateSuccess ? "user updated successfully" : ""}
       </p>
     </div>
