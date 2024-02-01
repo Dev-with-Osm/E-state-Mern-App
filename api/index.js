@@ -22,7 +22,7 @@ mongoose
     console.log(err);
   });
 
-const __dirname = path.resolve();
+// const __dirname = path.resolve();
 
 app.use("/api/user", userRouter);
 app.use("/api/auth", authRouter);
