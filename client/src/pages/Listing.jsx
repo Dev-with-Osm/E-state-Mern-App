@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css/bundle";
 import SwiperCore from "swiper";
 import { Navigation } from "swiper/modules";
 import { useSelector } from "react-redux";
-import "swiper/css/bundle";
 import {
   FaBath,
   FaBed,
