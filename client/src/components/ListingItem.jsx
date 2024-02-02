@@ -18,7 +18,7 @@ export default function ListingItem({ listing }) {
           {listing.name}
         </p>
         <div className="flex items-center  gap-1">
-          <MdLocationOn className="h-4 w-4 text-green-800" />
+          <MdLocationOn className="h-4 w-4 text-blue-400" />
           <p className="text-sm text-gray-500 font-medium w-full">
             {listing.address}
           </p>
@@ -34,7 +34,7 @@ export default function ListingItem({ listing }) {
             : listing.regularPrice.toLocaleString("en-US")}
           {listing.type === "rent" && " / month"}
         </p>
-        <ul className="text-green-900 font-semibold text-sm mt-2 flex gap-4 items-center sm:gap-3 flex-wrap ">
+        <ul className="text-slate-400 font-semibold text-sm mt-2 flex gap-4 items-center sm:gap-3 flex-wrap ">
           <li className="flex text-xs items-center gap-1 whitespace-nowrap ">
             <FaBed className="text-lg" />
             {listing.bedrooms > 1

@@ -44,31 +44,30 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
+    <div className=" sm:justify-center">
       {/* top head */}
-      <div className="flex flex-col gap-6 p-28 px-3 max-w-6xl mx-auto">
-        <h1 className="text-slate-500  font-bold text-3xl lg:text-6xl">
+      <div className="flex flex-col gap-6 p-28 px-3 max-w-6xl mx-auto justify-center">
+        <h1 className="text-slate-600  font-bold text-3xl lg:text-6xl text-center">
           Find your next{" "}
-          <span
-            className="font-bold"
-            style={{
-              WebkitTextFillColor: "transparent",
-              WebkitTextStroke: "2px #334155",
-            }}
-          >
-            perfect
-          </span>
+          <span className="font-bold text-slate-400 stroke-2 ">perfect</span>
           <br />
           place with easly
         </h1>
-        <div className="text-gray-400 text-xs sm:text-sm">
+        <div className="text-gray-400 text-xs sm:text-sm text-center">
           Osm Estate is the best place to find your next perfect place to live.
           <br />
           we have a wide range of properties for you to choose from.
         </div>
-        <Link className="btn" to={"/search"}>
-          Let's get started
-        </Link>
+        <div className="flex justify-center">
+          <Link
+            className="  text-center border-[3px] border-slate-600 font-semibold py-2
+             px-5 rounded-full hover:bg-slate-600 hover:text-white 
+            transition-all duration-500 ease-in-out"
+            to={"/search"}
+          >
+            Let's get started
+          </Link>
+        </div>
       </div>
 
       {/* swiper */}
