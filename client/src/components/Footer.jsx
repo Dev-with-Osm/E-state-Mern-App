@@ -30,19 +30,15 @@ const Footer = () => {
 
         <div className="flex space-x-4">
           <Link
-            to={"/"}
-            className="text-black hover:text-gray-500 transition duration-300"
-          >
-            <FaFacebook />
-          </Link>
-          <Link
-            to={"/"}
+            target="_blank"
+            to={"https://twitter.com/999Osm"}
             className="text-black hover:text-gray-500 transition duration-300"
           >
             <FaTwitter />
           </Link>
           <Link
-            to={"/"}
+            target="_blank"
+            to={"https://www.instagram.com/osm.developer?igsh=enQzY2p0cG9rZTQ0"}
             className="text-black hover:text-gray-500 transition duration-300"
           >
             <FaInstagram />

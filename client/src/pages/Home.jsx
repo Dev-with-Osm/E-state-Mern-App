@@ -47,7 +47,7 @@ export default function Home() {
     <div>
       {/* top head */}
       <div className="flex flex-col gap-6 p-28 px-3 max-w-6xl mx-auto">
-        <h1 className="text-slate-700 font-bold text-3xl lg:text-6xl">
+        <h1 className="text-slate-500  font-bold text-3xl lg:text-6xl">
           Find your next{" "}
           <span
             className="font-bold"
@@ -72,36 +72,37 @@ export default function Home() {
       </div>
 
       {/* swiper */}
-
-      <Swiper
-        autoplay={{
-          delay: 3500,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-      >
-        {offerListings &&
-          offerListings.length > 0 &&
-          offerListings.map((listing) => (
-            <SwiperSlide key={listing._id}>
-              <div
-                style={{
-                  background: `url(${listing.imageUrls[0]})  no-repeat center`,
-                  backgroundSize: "cover",
-                }}
-                className="h-[250px] sm:h-[500px]"
-              ></div>
-            </SwiperSlide>
-          ))}
-      </Swiper>
+      <div className="max-w-6xl mx-auto sm:rounded-lg overflow-hidden">
+        <Swiper
+          autoplay={{
+            delay: 3500,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+        >
+          {offerListings &&
+            offerListings.length > 0 &&
+            offerListings.map((listing) => (
+              <SwiperSlide key={listing._id}>
+                <div
+                  style={{
+                    background: `url(${listing.imageUrls[0]})  no-repeat center`,
+                    backgroundSize: "cover",
+                  }}
+                  className="h-[250px] sm:h-[500px]"
+                ></div>
+              </SwiperSlide>
+            ))}
+        </Swiper>
+      </div>
 
       {/* bottom */}
       <div className="max-w-6xl mx-auto p-3 flex flex-col gap-8 my-10 ">
         {offerListings && offerListings.length > 0 && (
           <div className="">
-            <div className="flex justify-between p-2 px-14 items-center my-3">
+            <div className="flex justify-between p-2 sm:px-14 items-center my-3">
               <h2 className="text-2xl font-bold text-slate-600">
                 Recent offers
               </h2>
@@ -121,7 +122,7 @@ export default function Home() {
         )}
         {saleListings && saleListings.length > 0 && (
           <div className="">
-            <div className="flex justify-between p-2 px-14 items-center my-3">
+            <div className="flex justify-between p-2 sm:px-14 items-center my-3">
               <h2 className="text-2xl font-bold text-slate-600">
                 Recent places for Sale
               </h2>
@@ -141,7 +142,7 @@ export default function Home() {
         )}
         {rentListings && rentListings.length > 0 && (
           <div className="">
-            <div className="flex justify-between p-2 px-14 items-center my-3">
+            <div className="flex justify-between p-2 sm:px-14 items-center my-3">
               <h2 className="text-2xl font-bold text-slate-600">
                 Recent places for Rent
               </h2>
